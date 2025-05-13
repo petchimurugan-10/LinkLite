@@ -1,8 +1,6 @@
-version: '3.8'
 services:
   postgres:
     image: postgres:13
-    container_name: pg_db
     restart: always
     environment:
       POSTGRES_USER: myuser
@@ -10,11 +8,26 @@ services:
       POSTGRES_DB: urlshortener
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   redis:
     image: redis:alpine
-    container_name: redis_cache
     restart: always
     ports:
-      - "6379:6379"
+      - "6380:6379"
 
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://myuser:password@postgres:5432/urlshortener  # Update to use service name
+      - REDIS_URL=redis://redis:6379/0  # Update to use service name
+      - SECRET_KEY=EU2msK8cPR0Ix9WN2STXyzTQ14g53/QEVDhY0E9r11A
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  postgres_data:

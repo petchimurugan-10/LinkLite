@@ -99,7 +99,7 @@ The app will be available at http://localhost:5000.
 ### Option 2: Docker Setup
 
 Clone the Repository:
-git clone https://github.com/your-username/Url-Shortener.git
+git clone https://github.com/petchimurugan-10/Url-Shortener.git
 cd Url-Shortener
 
 
@@ -137,22 +137,6 @@ You’ll be redirected to the original URL.
 ## View Stats:
 
 Go to http://localhost:5000/stats/abc123 to see click statistics for the shortened URL.
-
-
-
-## Project Structure
-Url-Shortener/
-├── app/
-│   ├── __init__.py      # Flask app setup
-│   ├── models.py        # Database models (Urls, Clicks)
-│   ├── routes.py        # Application routes
-│   ├── static/          # Static files (CSS, JS)
-│   └── templates/       # HTML templates
-├── .env.example         # Example environment file
-├── Dockerfile           # Docker configuration for the app
-├── docker-compose.yml   # Docker Compose configuration
-├── requirements.txt     # Python dependencies
-└── run.py               # Entry point for the app
 
 ## Contributing
 Contributions are welcome! Please follow these steps:

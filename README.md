@@ -30,7 +30,7 @@ Git (to clone the repository)
 #### Option 1: Local Setup
 
 Clone the Repository:
-git clone https://github.com/your-username/Url-Shortener.git
+git clone https://github.com/petchimurugan-10/Url-Shortener.git
 cd Url-Shortener
 
 

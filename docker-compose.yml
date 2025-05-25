@@ -24,7 +24,7 @@ services:
     environment:
       - DATABASE_URL=postgresql://myuser:password@postgres:5432/urlshortener  # Update to use service name
       - REDIS_URL=redis://redis:6379/0  # Update to use service name
-      - SECRET_KEY=EU2msK8cPR0Ix9WN2STXyzTQ14g53/QEVDhY0E9r11A
+      - SECRET_KEY="<YOUR_SECRET_KEY>"
     depends_on:
       - postgres
       - redis

@@ -1,4 +1,4 @@
-# URL Shortener
+# Link Lite
 
 A simple and efficient URL shortening service built with Flask, PostgreSQL, and Redis. This project allows users to shorten long URLs, redirect using shortened URLs, and view click statistics for each shortened URL. It includes URL validation, caching with Redis, and click tracking.
 
